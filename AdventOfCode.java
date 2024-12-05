@@ -19,4 +19,8 @@ public class AdventOfCode {
 
         return new Row().getSum(allSimilarity);
     }
+
+    public int day2 (int[][] reports) {
+        return new Level().getSafe(reports);
+    }
 }
