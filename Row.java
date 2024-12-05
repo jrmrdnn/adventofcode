@@ -26,6 +26,28 @@ public class Row {
         return rows;
     }
 
+    public int getSimilarity(int row, int[] col) {
+        int similarity = 0;
+
+        for (int value : col) 
+            if (row == value) similarity++;
+        
+
+        return similarity;
+    }
+
+    public int[] getAllSimilarity(int[] col1, int[] col2) {
+        int[] allSimilarity = new int[col1.length];
+
+        for (int i = 0; i < col1.length; i++) {
+            int similarity = getSimilarity(col1[i], col2);
+            allSimilarity[i] = col1[i] * similarity;
+        }
+
+        return allSimilarity;
+    }
+    
+
     public int getSum(int[] rows) {
         int sum = 0;
 
