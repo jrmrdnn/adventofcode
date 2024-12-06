@@ -38,6 +38,16 @@ public class Puzzle {
         return matches;
     }
     
+    public String splitStrings(String input) {
+        List<String> inputs = new ArrayList<>();
+        String[] splitDo = input.split("do\\(\\)");
+
+        for (String part : splitDo) 
+            inputs.add(part.split("don't\\(\\)")[0]);
+        
+        return String.join("", inputs);
+    }
+    
     public int getSum(List<String> matches) {
         int sum = 0;
         

@@ -20,5 +20,8 @@ public class Main {
 
         int day3 = new AdventOfCode().day3(puzzles);
         System.out.println("day3: " + day3);
+
+        int day3_2 = new AdventOfCode().day3_2(puzzles);
+        System.out.println("day3_2: " + day3_2);
     }
 }

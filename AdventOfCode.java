@@ -34,4 +34,10 @@ public class AdventOfCode {
         List<String> input = new Puzzle().getAllMul(inputs);
         return new Puzzle().getSum(input);
     }
+
+    public int day3_2(String inputs) {
+        String puzzle = new Puzzle().splitStrings(inputs);
+        List<String> input = new Puzzle().getAllMul(puzzle);
+        return new Puzzle().getSum(input);
+    }
 }
