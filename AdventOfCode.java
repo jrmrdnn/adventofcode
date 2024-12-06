@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class AdventOfCode {
     public int day1(int[][] rows) {
         int[] col1 = new Col().getCol(rows, 0);       
@@ -26,5 +28,10 @@ public class AdventOfCode {
     
     public int day2_2(int[][] reports) {
         return new Level().getSafeTolerateSingleLevel(reports);
+    }
+
+    public int day3(String inputs) {
+        List<String> input = new Puzzle().getAllMul(inputs);
+        return new Puzzle().getSum(input);
     }
 }
