@@ -20,7 +20,11 @@ public class AdventOfCode {
         return new Row().getSum(allSimilarity);
     }
 
-    public int day2 (int[][] reports) {
+    public int day2(int[][] reports) {
         return new Level().getSafe(reports);
+    }
+    
+    public int day2_2(int[][] reports) {
+        return new Level().getSafeTolerateSingleLevel(reports);
     }
 }

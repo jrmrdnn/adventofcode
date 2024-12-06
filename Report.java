@@ -16,17 +16,13 @@ public class Report {
                 String[] split = list.get(i).split(" ");
                 reports[i] = new int[split.length];
 
-                for (int j = 0; j < split.length; j++) {
+                for (int j = 0; j < split.length; j++) 
                     reports[i][j] = Integer.parseInt(split[j]);
-                }
             }
-
-
         } catch (IOException e) {
             System.err.println("An error occurred: " + e.getMessage());
             reports = new int[0][0];
         }
-
         return reports;
     }
 }

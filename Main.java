@@ -12,5 +12,8 @@ public class Main {
 
         int day2 = new AdventOfCode().day2(reports);
         System.out.println(day2);
+
+        int day2_2 = new AdventOfCode().day2_2(reports);
+        System.out.println(day2_2);
     }
 }
