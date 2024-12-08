@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         int[][] rows = new Row().getAll("data/day1.txt");
@@ -23,5 +24,10 @@ public class Main {
 
         int day3_2 = new AdventOfCode().day3_2(puzzles);
         System.out.println("day3_2: " + day3_2);
+
+        String[][] puzzlesXmas = new Xmas().getAll("data/day4.txt");
+
+        int day4 = new AdventOfCode().day4(puzzlesXmas);
+        System.out.println("day4: " + day4);
     }
 }
