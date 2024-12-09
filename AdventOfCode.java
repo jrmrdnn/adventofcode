@@ -45,12 +45,18 @@ public class AdventOfCode {
         String target = "XMAS";
         int countTop = new Xmas().getCountPuzzleTop(puzzles, target);
         int countBottom = new Xmas().getCountPuzzleBottom(puzzles, target);
-        int countLeft = new Xmas().getCountPuzzleLeft(puzzles, target);
         int countRight = new Xmas().getCountPuzzleRight(puzzles, target);
-        int countTopLeft = new Xmas().getCountPuzzleTopLeft(puzzles, target);
+        int countLeft = new Xmas().getCountPuzzleLeft(puzzles, target);
         int countTopRight = new Xmas().getCountPuzzleTopRight(puzzles, target);
-        int countBottomLeft = new Xmas().getCountPuzzleBottomLeft(puzzles, target);
+        int countTopLeft = new Xmas().getCountPuzzleTopLeft(puzzles, target);
         int countBottomRight = new Xmas().getCountPuzzleBottomRight(puzzles, target);
-        return countTop + countBottom + countLeft + countRight + countTopLeft + countTopRight + countBottomLeft + countBottomRight;
+        int countBottomLeft = new Xmas().getCountPuzzleBottomLeft(puzzles, target);
+        return countTop + countBottom + countLeft + countRight + countTopLeft + countTopRight + countBottomLeft
+                + countBottomRight;
+    }
+    
+    public int day4_2(String[][] puzzles) {
+        int countXMas = new Xmas().getCountPuzzleXMas(puzzles);
+        return countXMas;
     }
 }

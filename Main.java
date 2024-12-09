@@ -29,5 +29,8 @@ public class Main {
 
         int day4 = new AdventOfCode().day4(puzzlesXmas);
         System.out.println("day4: " + day4);
+
+        int day4_2 = new AdventOfCode().day4_2(puzzlesXmas);
+        System.out.println("day4_2: " + day4_2);
     }
 }

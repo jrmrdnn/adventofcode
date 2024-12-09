@@ -156,6 +156,23 @@ public class Xmas {
         return count;
     }
 
+    public int getCountPuzzleXMas(String[][] puzzles) {
+        int puzzlesLength = puzzles.length;
+        int count = 0;
+
+        for (int i = 0; i < puzzlesLength; i++) {
+            if (i == 0 || i == puzzlesLength - 1)
+                continue;
+            for (int y = 0; y < puzzles[i].length; y++) {
+                if (y == 0 || y == puzzles[i].length - 1)
+                    continue;
+                if (puzzles[i][y].equals("A") && patternXMas(puzzles, i, y)) 
+                    count++;
+            }
+        }
+        return count;
+    }
+
     private boolean patternTop(String[][] puzzles, int i, int y, String input) {
         for (int j = 0; j < input.length(); j++) {
             if (!puzzles[i - j][y].equals(input.substring(j, j + 1))) {
@@ -227,5 +244,14 @@ public class Xmas {
             }
         }
         return true;
+    }
+
+    private boolean patternXMas(String[][] puzzles, int i, int y) {
+        boolean condition1 = puzzles[i - 1][y - 1].equals("M") && puzzles[i + 1][y + 1].equals("S");
+        boolean condition2 = puzzles[i - 1][y - 1].equals("S") && puzzles[i + 1][y + 1].equals("M");
+        boolean condition3 = puzzles[i - 1][y + 1].equals("M") && puzzles[i + 1][y - 1].equals("S");
+        boolean condition4 = puzzles[i - 1][y + 1].equals("S") && puzzles[i + 1][y - 1].equals("M");
+
+        return (condition1 && (condition3 || condition4)) || (condition2 && (condition3 || condition4));
     }
 }
