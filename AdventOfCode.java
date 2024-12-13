@@ -59,4 +59,9 @@ public class AdventOfCode {
         int countXMas = new Xmas().getCountPuzzleXMas(puzzles);
         return countXMas;
     }
+
+    public int day5(int[][][] updatePuzzles) {
+        int countUpdate = new Update().getCount(updatePuzzles);
+        return countUpdate;
+    }
 }
